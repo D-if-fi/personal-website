@@ -43,8 +43,9 @@ projects:
   # twitter: your_username
   # unsplash: your_username
   # vk: your_username
-  # website: http://your_website_url
+  website: https://d-if-fi.github.io/personal-website/
   # youtube: your_username
+  WeChat: D-if_fi
 
 topics:
   - name: CSS
