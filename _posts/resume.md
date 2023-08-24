@@ -6,6 +6,7 @@ tags: [个人简历]
 ---
 
 #### 个人简历
+##### 更新时间[2022-08-11]
 <img src="/assets/pics/resume_01.jpg" alt="resume_01"  style="max-width:100%; height: auto;">
 <img src="/assets/pics/resume_02.jpg" alt="resume_02"  style="max-width:100%; height: auto;">
 <img src="/assets/pics/resume_03.jpg" alt="resume_03"  style="max-width:100%; height: auto;">
