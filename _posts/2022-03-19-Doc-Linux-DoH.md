@@ -1,4 +1,12 @@
-	1. 前言
+---
+title: "：快速自建 DoH ( DNS over HTTPS) 服务"
+published: true
+categories: [Doc]
+tags: [Linux]
+---
+<hr>
+
+# 1. 前言：
 DoH（DNS over HTTPS），顾名思义，suoyis，除了最常用的UDP外，还有DoT（DNS over TLS），DNS over HTTP（服务提供商自定义）等方案，对比如下：
 
 | 协议 | 标准 | 描述 |
@@ -20,12 +28,12 @@ DoH（DNS over HTTPS），顾名思义，suoyis，除了最常用的UDP外，还
 	- DoH可自定义域名、端口且使用HTTP2作为传输协议，稳定性更强
 综上，只有自建DoH服务了，于是就有了下面的折腾，最后测试时发现这个傻瓜路由器系统只支持一些特定的DoH服务商如阿里云DNS、DNSPod等，不支持自建的DoH服务。
 
-	2. 部署方案
+# 2. 部署方案
 DoH本质上就是一个HTTP请求，只是目前协议定义要求启用TLS与HTTP/2。最初没有跑通coredns的DoH时，使用了nginx作为前端转发DoH请求到doh-server，然后doh-server使用本地的coredns服务作为上游。
 
 最近再仔细研究了下文档，发现coredns已经支持了DoH服务，可直接对外暴露服务，或者通过nginx转发来复用已经部署好的web服务。
 
-	2.1 nginx + doh-server + coredns
+## 2.1 nginx + doh-server + coredns
 https://github.com/m13253/dns-over-https 是一个提供 DNS over HTTP 的服务，需要一个web前端和一个DNS后端，可用的docker镜像地址为：[satishweb/doh-server](https://hub.docker.com/r/satishweb/ doh-server)，使用doh-server时，DNS请求流转如下：
 
 HTTP Service -> doh-server -> DNS Server
@@ -93,7 +101,7 @@ docker run -d --restart unless-stopped --network host --name coredns \
 服务启动后，我们可以得到一个自定义的DoH服务：https://doh.wbuntu.com/dns-query
 
 
-	2.2 coredns
+## 2.2 coredns
 目前coredns支持作为DoH服务端，不支持连接上游DoH服务器，上游服务器可使用UDP和DoT。
 
 直接对外暴露服务需要使用有效的TLS证书，coredns配置文件及证书位置如下：
@@ -125,7 +133,7 @@ docker run -d --restart unless-stopped --network host --name coredns \
  ```
 服务启动后，我们可以得到一个自定义的DoH服务：https://doh.wbuntu.com/dns-query
 
-	2.3 nginx + coredns
+## 2.3 nginx + coredns
 直接暴露coredns服务到公网需要占用端口，coredns在未配置TLS证书时，可使用nginx作为前端来复用web服务，如下：
 
 nginx配置（已配置好TLS与HTTP2）
@@ -177,7 +185,7 @@ docker run -d --restart unless-stopped --network host --name coredns \
 
 
 
-3. 测试
+# 3. 测试
 使用谷歌浏览器配置DoH服务：Settings -> Secutiry and Privacy -> Secutiry -> Advanced -> Use secure DNS
 ![88761d14e444f105d866fe073029fecf.png](:/54443ddb5f484a0c8e37e58719a739f9)
 使用Go代码测试：github.com/mikumaycry/example/blob/main/2021/doh/main.go
