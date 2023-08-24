@@ -28,7 +28,7 @@ projects:
     projects:
     # - repo-name
 
-# social_media:
+ social_media:
   # behance: your_username
   # dribbble: your_username
   # facebook: your_username
@@ -48,12 +48,10 @@ projects:
   WeChat: D-if_fi
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  - name: 我的boss直聘
+    web_url: https://www.zhipin.com/gongsir/5ba2ae5248837b0d1n192Nq0FQ~~.html?ka=company-jobs/?from=ash
+    image_url: https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/9f/fd/1f/9ffd1f23-358c-3cfd-fad6-71e1c2180e96/AppIcon-0-1x_U007emarketing-0-0-85-220-8.png/246x0w.jpg
 
-  - name: Web design
-
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  - name: 我的NPM
+    web_url: https://www.npmjs.com/
+    image_url: https://avatars.githubusercontent.com/u/6078720?s=200&v=4
