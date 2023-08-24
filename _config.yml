@@ -43,13 +43,14 @@ social_media:
   # twitter: your_username
   # unsplash: your_username
   # vk: your_username
+  email: dengze93@qq.com
   website: https://d-if-fi.github.io/personal-website/
   # youtube: your_username
   WeChat: D-if_fi
 
 topics:
   - name: 我的boss直聘
-    web_url: https://www.zhipin.com/gongsir/5ba2ae5248837b0d1n192Nq0FQ~~.html?ka=company-jobs/?from=ash
+    web_url: https://m.zhipin.com/mpa/html/resume-detail?sid=self&securityId=zjNVro8d_fKU1-P1KN_wjycU4MdKoGd3jQGTF6sIAeMNwcIK0FRxpzRlfQuaFgCDgJgVWEK8R5DoE_Y3TuUD4fMWiZ8NG39qV76Zbc7_a2nlb5AjwdzqdAlAAhPo7gb73mzxfRZrQEEP4lkwdjYFh53QaUu7VpK1je2B
     image_url: https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/9f/fd/1f/9ffd1f23-358c-3cfd-fad6-71e1c2180e96/AppIcon-0-1x_U007emarketing-0-0-85-220-8.png/246x0w.jpg
 
   - name: 我的NPM
